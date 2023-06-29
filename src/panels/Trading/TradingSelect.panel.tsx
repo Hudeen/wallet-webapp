@@ -17,16 +17,13 @@ export function TradingSelectPanel() {
   function changeExchagePair(exchangePair: any) {
     try {
       window.navigator.vibrate(70); // Вибрация
+      
     } catch (e) {
       (window as any).Telegram.WebApp.HapticFeedback.impactOccurred("light");
     } finally {
       updateSelectedExchangePair(exchangePair);
       navigate(
-        ROUTE_NAMES.SWAP +
-          "?pair=" +
-          exchangePair.assets[0] +
-          "_" +
-          exchangePair.assets[1]
+        ROUTE_NAMES.SWAP_SELECT + "?pair=" + exchangePair.assets[0] + "_" + exchangePair.assets[1]
       );
     }
   }

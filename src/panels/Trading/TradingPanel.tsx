@@ -140,10 +140,13 @@ export function TradingPanel() {
   return (
     <>
       {/* {!selectedExchangePair.hasOwnProperty("assets") ? ( */}
-      {query.get("pair") === null ? (
-        <Navigate to={ROUTE_NAMES.SWAP_SELECT} />
+      {/* {query.get("pair") === null ? (
+        // <Navigate to={ROUTE_NAMES.SWAP_SELECT} />
+        <></>
       ) : (
-        <Panel>
+        
+      )} */}
+      <Panel>
           <div className={styles.__header}>
             <SwitcherIcon
               color="var(--tg-theme-hint-color)"
@@ -726,7 +729,6 @@ export function TradingPanel() {
 
           {error ? <ErrorBlock text={errorMapping(error)} /> : null}
         </Panel>
-      )}
     </>
   );
 }

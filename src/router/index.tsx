@@ -129,11 +129,11 @@ export const router = createBrowserRouter([
   // },
   {
     path: ROUTE_NAMES.SWAP,
-    element: <TradingPanel />,
+    element: <TradingSelectPanel />,
   },
   {
     path: ROUTE_NAMES.SWAP_SELECT,
-    element: <TradingSelectPanel />,
+    element: <TradingPanel />,
   },
   {
     path: ROUTE_NAMES.SWAP_SUCCESS,
